@@ -1,9 +1,9 @@
 .PHONY: all init docker-build docker-up
 all: init docker-build docker-up
 
-.PHONY: init
-init:
-	@echo "Cloning submodules"
+.PHONY: submodules
+submodules:
+	@echo "Updating submodules"
 	git submodule update --init --recursive
 
 .PHONY: docker-build
