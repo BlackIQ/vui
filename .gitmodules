@@ -1,0 +1,6 @@
+[submodule "api"]
+	path = api
+	url = https://github.com/BlackIQ/vui-api
+[submodule "client"]
+	path = client
+	url = https://github.com/BlackIQ/vui-client
