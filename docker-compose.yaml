@@ -1,0 +1,21 @@
+services:
+  vui-api:
+    image: vui-api
+    build:
+      context: api
+      # dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    restart: always
+  vui-client:
+    image: vui-client
+    build:
+      context: client
+      # dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    restart: always
+  vui-db:
+    image: mongo
+    ports:
+      - 2717:27017
