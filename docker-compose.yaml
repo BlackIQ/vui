@@ -15,7 +15,15 @@ services:
     ports:
       - 3000:3000
     restart: always
-  vui-db:
-    image: mongo
+  vui-nginx:
+    image: vui-nginx
+    build:
+      context: nginx
     ports:
-      - 2717:27017
+      - 90:80
+      - 553:433
+    restart: always
+  # vui-db:
+  #   image: mongo
+  #   ports:
+  #     - 2717:27017
