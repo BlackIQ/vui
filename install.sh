@@ -6,6 +6,12 @@ if [ $(whoami) != "root" ]; then
   exit 1
 fi
 
+# Update and Install
+apt update -y
+apt upgrade -y
+
+apt install make -y
+
 # Setting up the env
 echo "Setting up the env"
 
